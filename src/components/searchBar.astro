@@ -1,0 +1,75 @@
+---
+/* Import any necessary scripts or styles */
+---
+
+<style>
+  /* Base styles for search bar */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    transition: width 0.3s ease; /* Smooth transition when expanding */
+  }
+
+  .search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .search-bar input:focus {
+    border-bottom: 2px solid #007acc;
+  }
+
+  /* Responsive behavior for smaller screens */
+  @media screen and (max-width: 768px) {
+    .search-bar {
+      justify-content: center;
+      align-items: center;
+      width: 40px; /* Small icon size */
+      height: 40px;
+      border-radius: 50%; /* Make it circular */
+      background-color: #007acc; /* Icon background color */
+      cursor: pointer; /* Indicate it's clickable */
+    }
+
+    .search-bar input {
+      display: none; /* Hide the input field */
+    }
+
+    .search-bar::before {
+      content: '🔍'; /* Add a search icon */
+      font-size: 20px; /* Icon size */
+      color: #fff; /* Icon color */
+    }
+
+    /* Expanded state when clicked */
+    .search-bar.expanded {
+      width: 100%; /* Expand to full width */
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .search-bar.expanded input {
+      display: block; /* Show the input field */
+    }
+  }
+</style>
+
+<!-- The HTML Structure -->
+<div class="search-bar" onclick="toggleSearch()">
+  <input type="text" placeholder="Search..." />
+</div>
+
+<!-- JavaScript for toggle effect -->
+<script>
+  function toggleSearch() {
+    const searchBar = document.querySelector('.search-bar');
+    searchBar.classList.toggle('expanded');
+  }
+</script>
