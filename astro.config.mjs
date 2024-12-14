@@ -10,9 +10,6 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/aryaman-23',
 			},
-			topNav: 
-				{ text: 'About', link: '/' },
-				// { text: 'Blog', link: '/blog' },
 			customCss: ['./src/styles/global.css']
 		}),
 
