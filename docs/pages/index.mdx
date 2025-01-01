@@ -1,16 +1,28 @@
 ---
 layout: landing
 ---
+import { Analytics } from "@vercel/analytics/react"
+import { Button } from 'vocs/components'
+import constants from '../constants'
 
-import { HomePage } from 'vocs/components'
+<img src="https://ik.imagekit.io/pke0jm0kn/2025-01-02%2000.22.11%20(3).jpg" alt="Example image" width="150" height="50"> </img>
 
-<HomePage.Root>
-  <HomePage.Logo />
-  <HomePage.Tagline>My Awesome Docs</HomePage.Tagline>
-  <HomePage.InstallPackage name="vocs" type="init" />
-  <HomePage.Description>This is a description of my documentation website.</HomePage.Description>
-  <HomePage.Buttons>
-    <HomePage.Button href="/getting-started" variant="accent">Get started</HomePage.Button>
-    <HomePage.Button href="https://github.com/wevm/vocs">GitHub</HomePage.Button>
-  </HomePage.Buttons>
-</HomePage.Root>
+Hi, I’m Aryaman Agarwal.
+
+I’m a Software Engineer passionate about building solutions from scratch and learning through the process.
+
+I discovered my love for programming when was in secondary education, learned programming in my undergraduate days abd developed passion for startups and building projects. I began with backend development, transitioned to fullstack, and now focus primarily on backend development. Currently I'm a Software Engineer at Railofy, India's largest food delivery-in-train startup. 
+
+This was my first oppurtunity to work as a full-time employee and I've had the privilege of working with early-stage startups and collaborating closely with my seniors and founders. This experience has shaped my approach that is more product-focused, enabling me to: 
+
+- Consider the broader product-wide impacts of features.
+- Design solutions that create net-positive outcomes for all stakeholders.
+- Anticipate and plan for feature scalability and extensibility.
+
+When I’m not coding, I'm usually watching or playing sports and also reading about Indian Politics. I'm also deeply interested in religious activities and some work towards greater India. I was also a state rank Table Tennis Player and a cricketer. You would often find me playing some sports or obsessing over something new.
+
+You can connect with me on [LinkedIn](https://www.linkedin.com/in/aryaman-agarwal-06a46b191/).
+
+<Button href={constants.downloadResumeUrl}>Download Resume</Button>
+
+<Analytics />
